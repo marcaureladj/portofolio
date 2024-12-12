@@ -22,7 +22,7 @@ const Contact = () => {
 
     try {
       // Remplacez cette URL par l'URL de votre script PHP sur votre serveur cPanel
-      const response = await fetch('https://marcaureladj.echolab-ai.com/send-mail.php', {
+      const response = await fetch('http://marcaureladj.echolab-ai.com/send-mail.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
