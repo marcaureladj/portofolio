@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0A1F0A] text-white font-sans;
+    background: radial-gradient(circle at top right, rgba(0, 255, 0, 0.1), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(0, 255, 0, 0.05), transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .nav-container {
+    @apply fixed top-0 left-0 right-0 z-50 px-4 py-3;
+    background: rgba(34, 54, 34, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 999px;
+    margin: 1rem 1rem;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-full transition-all duration-300;
+  }
+
+  .nav-link.active {
+    @apply bg-[#223622];
+  }
+
+  .glass-card {
+    @apply bg-[#223622]/50 backdrop-blur-sm rounded-2xl;
+  }
+  
+  .glass-nav {
+    @apply bg-[#223622]/80 backdrop-blur-md;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00FF00] to-[#00CC00];
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-[#00FF00]/10;
+  }
+
+  .cta-button {
+    @apply px-6 py-3 rounded-full bg-[#00FF00] text-black font-medium hover:bg-[#00CC00] transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A1F0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FF00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00CC00;
+}
+
+/* Gradient animations */
+.gradient-animate {
+  background: linear-gradient(-45deg, #00FF00, #00CC00, #00FF00);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
