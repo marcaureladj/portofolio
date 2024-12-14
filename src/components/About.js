@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import profileImage from './marc.png';
 const About = () => {
   const stats = [
     { label: "Années d'expérience", value: "5+" },
@@ -40,7 +40,12 @@ const About = () => {
             className="relative"
           >
             <div className="aspect-square rounded-2xl overflow-hidden glass-card">
-              <div className="w-full h-full bg-[#00FF00]/10" />
+             <img 
+                src={profileImage} 
+                alt="Marc-Aurel Adjahossou Adiffon"
+                className="w-full h-full object-cover"
+              />
+              
             </div>
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#00FF00]/20 rounded-full blur-xl" />
