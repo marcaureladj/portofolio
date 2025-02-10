@@ -88,78 +88,8 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
-                  Nom
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="glass-card w-full px-4 py-3 bg-[#00FF00]/5 border border-[#00FF00]/20 focus:border-[#00FF00] outline-none transition-colors duration-300"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="glass-card w-full px-4 py-3 bg-[#00FF00]/5 border border-[#00FF00]/20 focus:border-[#00FF00] outline-none transition-colors duration-300"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={6}
-                  className="glass-card w-full px-4 py-3 bg-[#00FF00]/5 border border-[#00FF00]/20 focus:border-[#00FF00] outline-none transition-colors duration-300"
-                  required
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full py-3 px-6 text-white font-medium rounded-lg 
-                  ${isSubmitting 
-                    ? 'bg-gray-500 cursor-not-allowed' 
-                    : 'bg-[#00CC00] hover:bg-[#00FF00]'} 
-                  transition-colors duration-300`}
-              >
-                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
-              </button>
+           <iframe src="https://calendly.com/marcaureladj/discutons-de-votre-projet" width="100%" height="600" frameborder="0"></iframe>
 
-              {status.message && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`mt-4 p-4 rounded-lg ${
-                    status.type === 'success' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-red-100 text-red-800'
-                  }`}
-                >
-                  {status.message}
-                </motion.div>
-              )}
-            </form>
           </motion.div>
 
           {/* Contact Information */}
